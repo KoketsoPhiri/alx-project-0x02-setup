@@ -1,10 +1,11 @@
+// pages/index.tsx
 import React from 'react';
-import Header from '@/components/layout/Header'; // Import the Header component
+import Header from '@/components/layout/Header'; // Ensure this line is present
 
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
-      <Header /> {/* Include the Header component */}
+      <Header /> {/* Header component rendered here */}
       <main className="flex-grow flex justify-center items-center">
         <h1 className="text-7xl font-extrabold text-gray-800 animate-pulse">Welcome to Next.js Project 0x02!</h1>
       </main>
