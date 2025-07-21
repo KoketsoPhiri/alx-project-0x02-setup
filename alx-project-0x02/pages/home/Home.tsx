@@ -1,12 +1,12 @@
 // pages/home.tsx
-import React, { useState } from 'react'; // Import useState
-import Header from '@/components/layout/Header';
+import React, { useState } from 'react';
+import Header from '@/components/layout/Header'; // Ensure this line is present
 import Card from '@/components/common/Card';
-import PostModal from '@/components/common/PostModal'; // Import PostModal
-import { PostData } from '@/interfaces'; // Import PostData
+import PostModal from '@/components/common/PostModal';
+import { PostData } from '@/interfaces';
 
 const Home: React.FC = () => {
-  const initialCards: PostData[] = [ // Changed initial content to match PostData structure
+  const initialCards: PostData[] = [
     {
       id: 1,
       title: "What is Next.js?",
@@ -33,15 +33,14 @@ const Home: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleAddPost = (newPost: PostData) => {
-    // Add new post to the beginning of the array for visibility
     setCards((prevCards) => [newPost, ...prevCards]);
-    setIsModalOpen(false); // Close modal after submission
+    setIsModalOpen(false);
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      <Header />
-      <main className="flex-grow flex flex-col items-center p-8"> {/* Removed justify-center here */}
+      <Header /> {/* Header component rendered here */}
+      <main className="flex-grow flex flex-col items-center p-8">
         <div className="flex justify-between items-center w-full max-w-4xl mb-10">
             <h1 className="text-5xl font-semibold text-blue-700 ">Welcome to the Home Page!</h1>
             <button
@@ -52,11 +51,10 @@ const Home: React.FC = () => {
             </button>
         </div>
 
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl"> {/* Adjusted max-width and added grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
           {cards.map((card) => (
             <Card
-              key={card.id} // Use the id from PostData for the key
+              key={card.id}
               title={card.title}
               content={card.content}
             />
