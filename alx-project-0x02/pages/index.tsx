@@ -1,16 +1,15 @@
 import React from 'react';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
+import Header from '@/components/layout/Header'; // Import the Header component
+
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col">
-      <Header />
-      <main className="flex justify-center items-center h-screen">
-        <h1 className="text-7xl font-thin">Welcome Page</h1>
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
+      <Header /> {/* Include the Header component */}
+      <main className="flex-grow flex justify-center items-center">
+        <h1 className="text-7xl font-extrabold text-gray-800 animate-pulse">Welcome to Next.js Project 0x02!</h1>
       </main>
-      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

@@ -1,31 +1,30 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-800 text-white p-4 shadow-md">
-      <nav className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
-          My Next.js App
-        </Link>
-        <ul className="flex space-x-4">
-          <li>
-            <Link href="/posts" className="hover:text-gray-300">
-              Posts
-            </Link>
-          </li>
-          <li>
-            <Link href="/users" className="hover:text-gray-300">
-              Users
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:text-gray-300">
-              About
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="bg-blue-600 text-white shadow-md py-4">
+      <div className="container mx-auto flex justify-between items-center px-4">
+        <h3 className="font-bold text-2xl">
+          <Link href="/">
+            <span className="cursor-pointer hover:text-blue-200 transition-colors duration-200">My Next.js App</span>
+          </Link>
+        </h3>
+        <nav>
+          <ul className="flex space-x-6">
+            <li>
+              <Link href="/home">
+                <span className="cursor-pointer hover:underline hover:text-blue-200 transition-colors duration-200">Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <span className="cursor-pointer hover:underline hover:text-blue-200 transition-colors duration-200">About</span>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
