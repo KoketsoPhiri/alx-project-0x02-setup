@@ -1,6 +1,6 @@
 // components/common/Button.tsx
 import React from 'react';
-import { ButtonProps, ButtonSize, ButtonShape } from '@/interfaces';
+import { ButtonProps, ButtonSize } from '@/interfaces';
 
 const Button: React.FC<ButtonProps> = ({
   children,

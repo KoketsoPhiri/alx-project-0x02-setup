@@ -1,6 +1,6 @@
 // components/common/PostModal.tsx
 import React, { useState } from 'react';
-import { PostData, PostModalProps } from '@/interfaces';
+import { PostModalProps } from '@/interfaces';
 
 const PostModal: React.FC<PostModalProps> = ({ onClose, onSubmit }) => {
   const [title, setTitle] = useState('');
